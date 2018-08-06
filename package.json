@@ -1,0 +1,26 @@
+{
+  "name": "blogapi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcw5038/BlogAPI.git"
+  },
+  "author": "Tyler Warrick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tcw5038/BlogAPI/issues"
+  },
+  "homepage": "https://github.com/tcw5038/BlogAPI#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {},
+  "description": ""
+}
