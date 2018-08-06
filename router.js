@@ -1,13 +1,10 @@
 'use strict';
 const express = require('express');
 const router = express.Router();
-const morgan = require('morgan');
-const bodyParser = require('body-parser');
 const {BlogPosts} = require('./models');
+const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
-const app = express();
-app.use(express.json());
-app.use(morgan('common'));
+
 
 
 
@@ -25,11 +22,11 @@ function generateText(){//generates text for blog posts
 BlogPosts.create('My fake blog post', generateText(), 'Joe Smith');
 
 
-app.get('/blog-posts', (req, res) => {
+router.get('/', (req, res) => {
   res.json(BlogPosts.get());
 });
 
-app.post('/blog-posts', jsonParser, (req, res) => {//creates a new blog post and also checks to make sure that all of the required fields have been fulfilled
+router.post('/', jsonParser, (req, res) => {//creates a new blog post and also checks to make sure that all of the required fields have been fulfilled
   const requiredFields = ['title', 'content', 'author'];
   for (let i = 0; i <requiredFields.length; i++){
     const field = requiredFields[i];
@@ -44,7 +41,7 @@ app.post('/blog-posts', jsonParser, (req, res) => {//creates a new blog post and
   res.status(201).json(item);
 });
 
-app.put('/blog-posts/:id', jsonParser, (req, res) => {//recall that put is for updating 
+router.put('/:id', jsonParser, (req, res) => {//recall that put is for updating 
   const requiredFields = ['id', 'title', 'content', 'author', 'publishDate'];
   for (let i=0; i < requiredFields.length; i++){
     const field = requiredFields[i];
@@ -71,14 +68,11 @@ app.put('/blog-posts/:id', jsonParser, (req, res) => {//recall that put is for u
   res.status(204).end();
 });
 
-app.delete('/blog-posts/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
   BlogPosts.delete(req.params.id);
   console.log(`Deleted blog post item \`${req.params.ID}\``);
   res.status(204).end();
 });
 
 
-app.listen(process.env.PORT || 8080, () => {
-  console.log(`Your app is listening on port ${process.env.PORT || 8080}`);
-});
-
+module.exports = router;
