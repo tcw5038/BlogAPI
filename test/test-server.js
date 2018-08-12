@@ -2,9 +2,9 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 
-const {app, runServer, closeServer } = require('../server');
-
 const expect = chai.expect;
+
+const {app, runServer, closeServer } = require('../server');
 
 chai.use(chaiHttp);
 
@@ -19,6 +19,7 @@ describe('Blog API Tests', function() {
 
   it('should list blog post items on GET', function() {
     return chai
+      .request(app)
       .get('blog-posts')
       .then(function(res){
         expect(res).to.have.status(200);
@@ -31,6 +32,7 @@ describe('Blog API Tests', function() {
   it('should add an item on POST', function(){
     const newItem = { title: 'My Blog Post', content: 'Fake content here', author:'Joe Smith' };
     return chai
+      .request(app)
       .post('blog-posts')
       .send(newItem)
       .then(function(res){
