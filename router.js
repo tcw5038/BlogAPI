@@ -33,7 +33,7 @@ router.post('/', jsonParser, (req, res) => {//creates a new blog post and also c
     if(!(field in req.body)){
       const errorMessage = `Missing ${field} in request body`;
       console.error(errorMessage);
-      return res.status(400).send(errorMessage);
+      return res.status(400).send(errorMessage);//once you do .send it is over
     }
   }
   //if we fall out of the loop with no errors, we will end up here and create the new item
@@ -55,6 +55,7 @@ router.put('/:id', jsonParser, (req, res) => {//recall that put is for updating
   if (req.params.id !== req.body.id){
     const errorMessage = `Request path id (${req.params.id}) and request body id (${req.body.id}) must match`;
     console.error(errorMessage);
+    return res.status(400).send(errorMessage);
   }
 
   console.log(`Updating blog item \`${req.params.id}\``);
@@ -65,7 +66,7 @@ router.put('/:id', jsonParser, (req, res) => {//recall that put is for updating
     author:req.body.author,
     publishDate:req.body.publishDate
   });
-  res.status(204).end();
+  res.status(204).end();//sends an empty response, similar to send except empty
 });
 
 router.delete('/:id', (req, res) => {
