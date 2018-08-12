@@ -31,7 +31,8 @@ describe('Blog API Tests', function() {
   it('should add an item on POST', function(){
     const newItem = { title: 'My Blog Post', content: 'Fake content here', author:'Joe Smith' };
     return chai
-      .put('blog-posts')
+      .post('blog-posts')
+      .send(newItem)
       .then(function(res){
         expect(res).to.have.status(201);//since it won't return anything in the body
         expect(res).to.be.json;
@@ -79,6 +80,4 @@ describe('Blog API Tests', function() {
         })
     );
   });
-
-
 });//describe function end
