@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy: salty-castle-53017
+  provider: heroku
+  api_key:
+    secure: hEFguV1wEkn69bwRZovbFmIAV0YEkMxhTKgS6ZUsmY7857aacN0iEN5H4vtvdtbTQY0as+4MPpBSsr7TMiHQIwgvajqkHyiIk+uYdKR7sF4I9g4wBS8lej785Oy2vvVgeZOBB1q2/Xt+c5Gwo/nn/MxtFkT72PWoKaZaYq7RM1uBMT9yBlDVDkQaFJFcvJIv7cOPqnu5dImoJFaX+2bU/CuqQ6UDu/FQwGiNyoK6qS45C9M/cKD5Fp3xhBJsV/Nm/NK3xVXeKvEmlp84nY5UqC5XgTlMRDtp3I+1r6E6ETB/vnRJ5awE0tN80uByQsw8WezCHLwjsBjj6ydzRPbaQuK/wvmoUsAjyyIbkxjyfQJiAVS4wOpXx0gwAxjnVYJPMln1/CELaQ0rALfe4aJytzNWUQptoLz0sT0f9HEUDPSh0OJm6FTSwMC1z1rqITLCR/etCbWP52fn4FtCyEmadkhKbrtV8oPoiZ68xkCc/m0uNZZ6pAM4R4dkzrkiCgy8djcN54mdBUQZmV+4osxqjRCv5uZgXWAKv3OeUC1KUJDj7O805C1Yuackt4bLNrdjS4EtGTS2wblPymwDFsseEaISk5a8KkRCBnHWvt8qDWuOHn5sZ9PsllBChFLJ97u3qus9eVEX4zMk0RD26Tpioj3teuIO0ZNlz11h7PX8+PA=
+  app: BlogAPI
+  on:
+    repo: tcw5038/BlogAPI
