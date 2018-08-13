@@ -48,22 +48,23 @@ describe('Blog API Tests', function() {
   });
 
   it('should update blog post items on PUT', function() {
-    const updateData = { title: 'My Blog Post updated', content: 'Fake content here updated', author:'Joe Smith updated' };
+    const updateData = { title: 'My Blog Post updated', content: 'Fake content here updated', author:'Joe Smith updated', };
     return (
       chai
         .request(app)
         .get('/blog-posts')
         .then(function(res) {
           updateData.id = res.body[0].id;
+          updateData.publishDate = res.body[0].publishDate;
           return chai
             .request(app)
             .put(`/blog-posts/${updateData.id}`)
+            .put(`/blog-posts/${updateData.publishDate}`)
             .send(updateData);
         })
         .then(function(res) {
           expect(res).to.have.status(204);
-        })
-    );
+        }));
   });
 
   it('should delete blog post items on DELETE', function() {
