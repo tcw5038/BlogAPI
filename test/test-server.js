@@ -42,7 +42,7 @@ describe('Blog API Tests', function() {
         expect(res.body).to.include.keys('title', 'content', 'author');
         expect(res.body.id).to.not.equal(null);
         expect(res.body).to.deep.equal(
-          Object.assign(newItem, { id: res.body.id })
+          Object.assign(newItem, { id: res.body.id, publishDate: res.body.publishDate })
         );
       });
   });
