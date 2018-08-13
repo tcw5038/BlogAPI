@@ -6,8 +6,6 @@ const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 
 
-
-
 function generateText(){//generates text for blog posts
   return (
     `Lorem ipsum dolor amet fanny pack etsy shaman, 3 wolf moon gluten-free you probably havent 
