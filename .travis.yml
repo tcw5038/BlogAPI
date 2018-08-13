@@ -1,9 +1,9 @@
 language: node_js
 node_js: node
-deploy:
+deploy: still-springs-36164
   provider: heroku
   api_key:
     secure: kZ02nA1ByafXp4MGkchAp/JTtNRr98WoaCudQ9syFJcxJ9VpcWvXyUqlSVDsHCH+fZYXAYK2ke4HhhtHy6Tl4YK6pb16tqud7+sZThknLM/10Rc0Pq+RcBCCXXPlWQkQdYXc//If/2bz7pf1OGKdKzh2QbwXzHv6B/jN0deGFJSbOtXBim/7iWgMG4bu/kruFSgZybLaB+9WMWtWu2gAs7olX1H2D0JuaJzWMWvuOQYSgR0Ziw82iQXbvOUbABIBZSbh9DfKsED79tcJPohnaHKJbXGkt20i2rEeRIgJpIu3V2wEyI8RdDZfyDZRRbt/8/j9GvO3P4zkJ0Ae2pWbC+H6pIz/+3xgWIWWcmlG2kJ1bjh9klJ1CjJ1cUVcXUAj8/96e8CKqg/imf2hhZlhptvQbMiUYyahDXdpzwdWDTQcQjGuYQ6pdQnOYWauttOOOJ+6guDlUn1mgklR4WHIx5IzBqTV85R4qdQQpKPbTZ+/0HdxJda3WM5mCPUPB41NCoUn4D31QmqNdYY7uyOZzBbiBpfS6dslmXopVykaPd0hBSiDanFO7VT8+qjq0ma6m9Cq3RWkG6a8NI3Cv4Q6gLqmu0IvWjo3NBIGdkmtDOOuBiNedZduqiWtk9mSe2/VYplIIm6avTREtg49rvMlo5LUNW7cT9NV4fYlclSjDxo=
-  app: still-springs-36164
+  app: BlogAPI
   on:
     repo: tcw5038/BlogAPI
