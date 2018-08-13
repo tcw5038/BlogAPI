@@ -1,9 +1,9 @@
 language: node_js
 node_js: node
-deploy: 
+deploy: vast-eyrie-76008
   provider: heroku
   api_key:
     secure: LAHJGSDacI2I5id48OGuAbCtO5flH+/Crac677RuCP95JXaukAerGpGHO/SfeyBAateSu84Cs/3QdYNGLKVuxV6uCQUpEQPncL5kdCObzKsv7Ovv+lJUCVRf9UOjYqsCa1dJW3geSpoppDkOvI3+HzmLmuGCJb/0LzHsyOQSiD5GtnbtKpqVvKTc0YQKQiUUVgzPR3P8oWgEcB+4gj4YuI5vqrmYx+XwJrmJnO2juYqqcFaEyJav/f1+h3jwt2I6hh912YvbuZWpCA8e035m4q6MAuXXF5CvkeAA37sUezGnlB7hOCchF8/V6LaOwAurHo/Sgn2jJzEbHAi6ryMJY/KaAoSVvQdG4bPTI3RIE1yW+dgBGpy16cswZrcxbYpb4q93yB+dBrs1hQvF7PDxWiuzPX7osboPlRA39ORMWKLFkIIz87E3LxgwSd+t0WBCmESx0o2Uzc3vYAHOd+CJNRkpT/ctKkNfBdrjbmPVoDHHGIf0eVv8aNRjmBljxaV8k6QpnOlkzyhcZZvTVVOV7wybYw8YyWXSE5b1ezNLJuxk8EL3OXNUJRY2NEmY8qmHe6sgvsgyfn0xOXNLzEKynWyz6QC07VreIRiieFUssoRIQTBbyu/JH84iV9TxIOe30ztQRelNzjSYXV57jIQZFA6pdN/eRSywpVoxHC67Z+A=
-  app: vast-eyrie-76008
+  app: BlogAPI
   on:
     repo: tcw5038/BlogAPI
