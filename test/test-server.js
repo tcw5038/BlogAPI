@@ -59,7 +59,6 @@ describe('Blog API Tests', function() {
           return chai
             .request(app)
             .put(`/blog-posts/${updateData.id}`)
-            .put(`/blog-posts/${updateData.publishDate}`)
             .send(updateData);
         })
         .then(function(res) {
